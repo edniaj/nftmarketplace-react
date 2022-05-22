@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# TGC-16 Project 3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# Title:Beast of burden
+#Website
+https://main--beastofburden.netlify.app/
+## Summary
 
-### `npm start`
+Beast of burden is an online decentralized, permissionless marketplace for users to buy and sell non-fungible tokens (“NFTs”)  on public blockchains..It is meant for users who wish to buy NFT without buying it from the blockchain. Users can list their own NFT on this marketplace or buy from other people's listings.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Stories
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technical hobbyists
 
-### `npm test`
+Tan Ah Kow is a Computer Science undergraduate, 25 years old. He would like to buy some NFT to build his own investment portfolio
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Acceptance Criteria
+1. User must be able to buy NFT from the platform
+2. User must be able to filter based on prices
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Art collectors
+Tan Ah Lian has been an art curator for years, she is trying to sell her NFT so that she can get other new nft pieces.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Acceptance Criteria
+1. User must be able to list the NFT
+2. Other users must be able to buy it
+3. Validation to prevent Tan Ah Lian from buying her own NFT by accident.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. There must be a user authentication system.
+2. There must be a checkout menu
+3. There must be a art
+4. User must be able to list art pieces
+5. User must be able to buy art pieces
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Website Structure
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+HTML5
+CSS3
+JavaScript
+React
+Material UI
+Leaflet
+Postgresql
+Axios
+Express
+Cors
+Visual Studio Code
+Git
+GitHub
+Netlify
+Heroku
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Deployment
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Base directory: Not set
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Build command: CI=false npm run build
 
-### Advanced Configuration
+Publish directory: build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hosted on Netlify free plan. To deploy, fork this code, and link your Github account with Netlify. Use the above settings. 
