@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { createContext } from 'react';
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -25,7 +25,7 @@ export const cartContext = createContext(null)
 function App() {
   const [cart, setCart] = useState([]) // NFTID 10008
   const [login, setLogin] = useState(false)
-  const port = 'http://localhost:3008'
+  const port = 'https://jdnftmarketplace.herokuapp.com'
 
 
   const checkAccessToken = async () => {
