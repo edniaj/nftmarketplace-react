@@ -1,247 +1,60 @@
-import axios from 'axios'
 import React from 'react'
-import { useContext } from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import { portContext } from '../App'
+import { Carousel, Container } from 'react-bootstrap';
+import { Box, Button, Typography } from '@material-ui/core'
+import ExploreCollection from './ExploreCollection';
 
-function Home () {
-  const port = useContext(portContext)['port']
-  const [collections, setCollections] = useState([])
+function Home() {
+    return (
+        <>
+            <Container fluid >
 
-  useEffect(() => {
-    let isCancelled = false
-    if (!isCancelled) {
-      axios.get(`${port}/api/collections/`).then(x => {
-        console.log(x.data)
-        setCollections(x.data)
-      })
-    }
+                <Container>
 
-    return () => {
-      isCancelled = true
-    }
-  }, [])
+                    <Carousel style={{}}>
+                        <Carousel.Item>
+                            <img
+                                className="img-fluid img-thumbnail w-100"
+                                src="https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=h2000"
+                                alt="First slide"
+                            />
+                            <Carousel.Caption>
+                                <h3>Bored Ape Yatch Club</h3>
+                                <p>What you waiting for ?</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://cdn.wallpapersafari.com/43/49/KCAD4F.jpg"
+                                alt="Second slide"
+                            />
+                         <Carousel.Caption>
+                                <h3>Only for members</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://cdn.wallpapersafari.com/50/52/1ko7Ma.jpg"
+                                alt="Third slide"
+                            />
 
-  return (
-    <>
-      <div>{JSON.stringify(collections)}</div>
-      <div class='container-fluid'>
-        <div class='d-flex flex-wrap'>
-          <div class='row row-cols-auto'>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
+                            <Carousel.Caption>
+                                <h3>BAYC GANG</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
+
+                </Container>
+                <div>
+                    <Typography variant='h3' style={{ textAlign: "center", marginTop: "2em" }}>Explore collections</Typography>
+                    <Typography variant='body2' style={{ textAlign: "center", marginTop: "2em" }} color='textSecondary'>Too much data in one collection, thus there's only 3 collections available</Typography>
+                    <ExploreCollection />
                 </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-            <div className='card col'>
-              <div className='card-body me-3'>
-                <h5 className='card-title'>Card title</h5>
-                <h6 className='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div href='#' className='card-link'>
-                  Card link
-                </div>
-                <div href='#' className='card-link'>
-                  Another link
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
+            </Container>
+
+        </>
+    )
 }
 
 export default Home
