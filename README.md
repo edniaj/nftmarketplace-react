@@ -39,8 +39,20 @@ Acceptance Criteria
 5. User must be able to buy art pieces
 
 
+## Database
+![database](https://user-images.githubusercontent.com/26456566/169698081-efea6f70-5f2a-4aff-97cf-24b0d50320f9.png)
 ## Website Structure
+#User profile
+/profile/:id
+#Collection to buy from
+/collections/:id
+#Explore collections
+/explore-collections
+#cart
+/cart
 
+/login
+/logout
 
 ## Technologies Used
 
