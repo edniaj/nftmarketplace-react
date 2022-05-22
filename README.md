@@ -42,13 +42,13 @@ Acceptance Criteria
 ## Database
 ![database](https://user-images.githubusercontent.com/26456566/169698081-efea6f70-5f2a-4aff-97cf-24b0d50320f9.png)
 ## Website Structure
-###User profile
+### User profile
 /profile/:id
-###Collection to buy from
+### collection to buy from
 /collections/:id
-###Explore collections
+### Explore collections
 /explore-collections
-###cart
+### cart
 /cart
 
 /login
