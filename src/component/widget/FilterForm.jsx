@@ -89,7 +89,7 @@ function FilterForm(props) {
                                                                     let clone = { ...formData };
                                                                     clone = clone[traitType] ? { ...clone } : { ...clone, [traitType]: [] }; // checks if traitType key exist (normalize)
                                                                     clone[traitType].includes(traitValue) ? clone[traitType] = clone[traitType].filter(x => x !== traitValue) : clone[traitType].push(traitValue)
-                                                                    console.log(clone)
+                                                                    // console.log(clone)
                                                                     setFormData(clone)
                                                                 }}
 

@@ -28,7 +28,7 @@ function ModalListing(props) {
             let tokenExpiry = jwt_decode(token).exp;
             let currentUnixTime = Math.round(new Date().getTime() / 1000);
             if (currentUnixTime >= tokenExpiry) {
-                console.log("Access token has expired. Getting a new token now.");
+                // console.log("Access token has expired. Getting a new token now.");
                 // Token has expired, need to refresh
                 const refreshToken = localStorage.getItem("refreshToken");
                 let refreshResponse = await axios.post(`${port}/api/users/refresh`, {
@@ -46,7 +46,7 @@ function ModalListing(props) {
     }
 
     const handlePost = async () => {
-        console.log(`modal id : ${JSON.stringify(props)}`)
+        // console.log(`modal id : ${JSON.stringify(props)}`)
         let url = `${port}/api/listings/update/${modalId}`
         await checkAccessToken()
         let accessToken = localStorage.getItem('accessToken')
@@ -57,7 +57,7 @@ function ModalListing(props) {
                 navigate(0)
             })
             .catch(err => {
-                console.log(`ERROR : ${err}`)
+                // console.log(`ERROR : ${err}`)
                 toast.error(`Failed to edit listing id :${modalId}`)
             })
     }

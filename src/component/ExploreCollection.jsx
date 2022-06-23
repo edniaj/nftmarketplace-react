@@ -20,7 +20,7 @@ export default function ExploreCollection() {
         let isCancelled = false
         if (!isCancelled) {
             axios.get(`${port}/api/collections/`).then(x => {
-                console.log(x.data)
+                // console.log(x.data)
                 setCollections(x.data)
             })
         }
@@ -34,7 +34,7 @@ export default function ExploreCollection() {
 
     const generateCard = () => {
         return collections.map((v, i) => {
-            console.log('i = ', i, '\n v = ', v) // Test code
+            // console.log('i = ', i, '\n v = ', v) // Test code
 
             let { name, profileUrl, bannerUrl, description, id } = v
             return (

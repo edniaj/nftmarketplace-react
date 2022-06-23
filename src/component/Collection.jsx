@@ -87,7 +87,7 @@ export default function Collection() {
 
     const loadTraitStats = async () => {
         // await axios.get(`${port}/api/collections/traitStats?id=${id}`).then(x => {
-        await axios.get(`http://localhost:3008/api/collections/traitStats?id=${id}`).then(x => {
+        await axios.get(`${port}/api/collections/traitStats?id=${id}`).then(x => {
             setTraitStats(x.data)
         }).catch(err => console.error(err))
     }
@@ -102,7 +102,7 @@ export default function Collection() {
 
     const loadCollectionInfo = async (source) => {
 
-        let url = `http://localhost:3008/api/collections/withoutJoin?id=${id}`
+        let url = `${port}/api/collections/withoutJoin?id=${id}`
         await axios.get(url,
             { cancelToken: source.token }).then(x => {
                 setCollectionInfo(x['data'])

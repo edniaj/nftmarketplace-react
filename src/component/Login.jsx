@@ -42,7 +42,7 @@ function Login() {
         await axios.post(url, loginForm)
             .then(async (res) => {
 
-                console.log(res.data)
+                // console.log(res.data)
                 localStorage.setItem("accessToken", res.data['accessToken']);
                 localStorage.setItem("refreshToken", res.data['refreshToken']);
                 toast.success("Successfully login!")

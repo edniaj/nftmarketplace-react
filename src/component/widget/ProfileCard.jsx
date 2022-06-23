@@ -97,7 +97,9 @@ export default function ProfileCard(DTO) {
 
       {price ? <ModalListing modalId={modalId} /> : <ModalCollected modalId={modalId} />}
 
-      <Card sx={sxCard} onClick={() => console.log(`nft__id :${nft__id} modalId:${modalId}`)}>
+      <Card sx={sxCard} onClick={() => {
+        // console.log(`nft__id :${nft__id} modalId:${modalId}`)
+        }}>
 
         <CardActionArea >
           <Link to={`../../assets/${tokenId}`} style={{ textDecoration: 'none' }}>
@@ -131,7 +133,7 @@ export default function ProfileCard(DTO) {
                   <div
                     onClick={async () => {
                       await setModalId(listing_id)
-                      console.log(`listing__id : ${listing_id} nft__id:${nft_id}`)
+                      // console.log(`listing__id : ${listing_id} nft__id:${nft_id}`)
                     }}
                     data-bs-toggle="modal"
                     data-bs-target="#deleteModal"
@@ -162,7 +164,7 @@ export default function ProfileCard(DTO) {
 
                     <div
                       onClick={async () => {
-                        console.log(DTO)
+                        // console.log(DTO)
                         await setModalId(nft__id)
                       }}
                       data-bs-toggle="modal"
